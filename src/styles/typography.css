@@ -11,7 +11,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+button,
+input {
   font-family: 'Staatliches';
   color: yellow;
 }
@@ -49,11 +51,13 @@ a:hover {
 
 input {
   border-bottom: 2px solid yellow;
-  color: yellow;
   font-size: 1rem;
-  font-family: 'Staatliches';
   text-align: center;
   line-height: 1.7;
+}
+
+button {
+  font-size: 1rem;
 }
 
 @media screen and (min-height: 1000px) and (min-width: 430px) {

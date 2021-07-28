@@ -8,6 +8,25 @@ body {
   overflow-x: hidden;
 }
 
+button {
+  border: 3px solid yellow;
+  text-transform: capitalize;
+  color: yellow;
+  margin-bottom: 0 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: yellow;
+  color: black;
+}
+
+hr {
+  width: 300px;
+  color: yellow;
+  margin: 2rem auto;
+}
+
 .landing {
   display: flex;
   flex-direction: column;
@@ -32,10 +51,14 @@ body {
   margin-bottom: 0;
 }
 
-hr {
-  width: 300px;
-  color: yellow;
-  margin: 2rem auto;
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.socials a {
+  margin: 0 1.5rem;
+  border-bottom: none;
 }
 
 .newsletter input {
@@ -45,35 +68,13 @@ hr {
   margin: 3rem auto;
 }
 
-button {
-  outline: none;
-  background: none;
-  border: 3px solid yellow;
-  text-transform: capitalize;
-  color: yellow;
-  font-size: 24px;
-  margin-bottom: 0 1rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-family: 'Staatliches';
-}
-
-.socials {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.socials a {
-  margin: 0 1.5rem;
-  border-bottom: none;
-}
-
 .info-container {
   min-height: 100vh;
 }
-
 .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   max-width: 1000px;
   min-height: 100vh;
   font-size: 24px;
@@ -81,13 +82,8 @@ button {
   background: rgba(0, 0, 0, 0.8);
   line-height: 1.4;
   color: rgba(255, 255, 255, 0.8);
-  border-radius: 2px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
-
 .info p {
   margin-bottom: 3rem;
 }
