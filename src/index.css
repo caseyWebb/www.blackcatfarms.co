@@ -1,140 +1,48 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-font,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-caption {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
+@import url(/src/styles/reset.css);
+@import url(/src/styles/typography.css);
 
-* {
-  box-sizing: border-box;
-}
-
-html,
 body {
-  height: 100%;
-  font-family: 'Montserrat';
+  background: url(/src/assets/landing_bg.jpg) no-repeat center fixed;
+  background-size: cover;
+  padding-bottom: 2rem;
+  overflow-x: hidden;
 }
 
-section {
-  height: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Staatliches';
-  color: yellow;
-}
-
-h2 {
-  font-size: 72px;
-}
-
-section.landing {
-  display: flex;
-  flex-direction: row;
-}
-
-section.landing .branding {
+.landing {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  width: 100%;
+  min-height: 100vh;
+  padding: 3rem;
   text-align: center;
-  height: 100%;
-  width: 50%;
   background-color: black;
   color: yellow;
-  font-size: 36px;
 }
 
-section.landing .branding h1 {
-  font-size: 200px;
+.landing > div,
+.contact > * {
+  margin: 2rem 0;
+}
+
+.landing > div:first-child {
+  margin-top: 0;
+}
+.landing > div:last-child {
+  margin-bottom: 0;
 }
 
 hr {
   width: 300px;
   color: yellow;
-  margin-bottom: 60px;
+  margin: 2rem auto;
 }
 
-a {
-  text-decoration: none;
-  color: yellow;
-  border-bottom: 1px dashed yellow;
-  transition: all 0.1s ease-in-out;
-}
-
-input {
-  outline: none;
-  background: none;
-  border: none;
-  border-bottom: 2px solid yellow;
-  box-shadow: none;
-  color: yellow;
-  font-size: 24px;
-  font-family: 'Staatliches';
-  text-align: center;
-  line-height: 1.7;
+.newsletter input {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  margin: 3rem auto;
 }
 
 button {
@@ -150,19 +58,6 @@ button {
   font-family: 'Staatliches';
 }
 
-a:hover {
-  color: #880;
-  border-bottom: 1px solid #880;
-}
-
-.contact h3 {
-  margin-bottom: 2rem;
-}
-
-section.landing .branding h2 {
-  font-size: 72px;
-}
-
 .socials {
   display: flex;
   flex-direction: row;
@@ -170,30 +65,51 @@ section.landing .branding h2 {
 }
 
 .socials a {
-  margin: 0.5em 1em;
-  font-size: 72px;
+  margin: 0 1.5rem;
   border-bottom: none;
 }
 
-.info {
-  height: 100%;
-  width: 50%;
-  padding: 100px;
-  background: url(/src/assets/landing_bg.jpg) no-repeat center;
+.info-container {
+  min-height: 100vh;
 }
 
-.info > div {
+.info {
+  max-width: 1000px;
+  min-height: 100vh;
   font-size: 24px;
   padding: 5rem;
-  max-width: 1000px;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.9);
-  color: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
   border-radius: 2px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .info p {
   margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    background: none;
+  }
+  .landing {
+    position: fixed;
+    top: 0;
+    width: 50vw;
+  }
+  .info-container {
+    background-image: url(/src/assets/landing_bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: max(50vw, 100vh);
+    background-position-x: right;
+    background-position-y: center;
+    position: relative;
+    left: 50vw;
+    width: 50vw;
+  }
 }
