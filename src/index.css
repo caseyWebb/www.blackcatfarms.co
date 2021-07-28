@@ -60,6 +60,10 @@ hr {
   margin: 0 1.5rem;
   border-bottom: none;
 }
+.socials svg {
+  fill: yellow;
+  width: 2rem;
+}
 
 .newsletter input {
   display: block;

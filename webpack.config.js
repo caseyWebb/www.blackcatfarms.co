@@ -9,10 +9,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
-const buildPath = path.resolve(__dirname, 'dist')
-
-module.exports = {
-  mode: 'production',
+module.exports = ({ WEBPACK_SERVE }) => ({
+  mode: WEBPACK_SERVE ? 'development' : 'production',
 
   devtool: 'source-map',
 
@@ -20,7 +18,7 @@ module.exports = {
 
   output: {
     filename: '[name].[contenthash].js',
-    path: buildPath,
+    path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
 
@@ -37,34 +35,37 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          WEBPACK_SERVE ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+        ],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        type: 'asset/resource',
+        test: /\.html$/i,
+        loader: 'ejs-loader',
+        options: { esModule: false },
       },
       {
-        resourceQuery: /raw/,
+        test: /\.svg$/i,
         type: 'asset/source',
       },
       {
-        resourceQuery: /template/,
-        loader: 'html-loader',
+        test: /\.(png|jpe?g|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
 
   plugins: [
-    new MiniCssExtractPlugin(),
+    ...(WEBPACK_SERVE ? [] : [new MiniCssExtractPlugin()]),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/index.html',
-      inject: true,
+      inject: WEBPACK_SERVE,
     }),
   ],
 
   optimization: {
-    minimize: true,
     minimizer: [
       new TerserPlugin({
         parallel: true,
@@ -72,4 +73,4 @@ module.exports = {
       new CssMinimizerPlugin(),
     ],
   },
-}
+})
