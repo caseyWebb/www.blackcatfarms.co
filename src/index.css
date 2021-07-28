@@ -2,7 +2,7 @@
 @import url(/src/styles/typography.css);
 
 body {
-  background: url(/src/assets/landing_bg.jpg) no-repeat center fixed;
+  background: url(/src/assets/landing_bg_s.webp) no-repeat center fixed;
   background-size: cover;
   padding-bottom: 2rem;
   overflow-x: hidden;
@@ -98,7 +98,7 @@ hr {
     width: 50vw;
   }
   .info-container {
-    background-image: url(/src/assets/landing_bg.jpg);
+    background-image: url(/src/assets/landing_bg_m.webp);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: max(50vw, 100vh);
@@ -107,5 +107,11 @@ hr {
     position: relative;
     left: 50vw;
     width: 50vw;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .info-container {
+    background-image: url(/src/assets/landing_bg_l.webp);
   }
 }
