@@ -1,3 +1,6 @@
+@import url('@fontsource/montserrat');
+@import url('@fontsource/staatliches');
+
 html,
 body {
   width: 100%;

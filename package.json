@@ -36,6 +36,9 @@
     "singleQuote": true
   },
   "devDependencies": {
+    "@fontsource/montserrat": "^4.5.0",
+    "@fontsource/staatliches": "^4.5.0",
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "@types/css-minimizer-webpack-plugin": "^3.0.2",
     "@types/mini-css-extract-plugin": "^2.0.1",
     "@types/terser-webpack-plugin": "^5.0.4",
