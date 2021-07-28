@@ -45,10 +45,15 @@ a {
   color: yellow;
   border-bottom: 1px dashed yellow;
 }
-
+a svg {
+  fill: yellow;
+}
 a:hover {
   color: #880;
   border-bottom: 1px solid #880;
+}
+a:hover svg {
+  fill: #880;
 }
 
 input {
