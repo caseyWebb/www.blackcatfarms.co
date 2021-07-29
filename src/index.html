@@ -22,13 +22,13 @@
         </div>
         <div class="contact">
             <div class="socials">
-                <a href="https://www.facebook.com/blackcatfarmsdfw">
+                <a href="https://www.facebook.com/blackcatfarmsdfw" aria-label="Facebook">
                     <%= require('@fortawesome/fontawesome-free/svgs/brands/facebook-square.svg') %>
                 </a>
-                <a href="https://www.instagram.com/blackcatfarmsdfw">
+                <a href="https://www.instagram.com/blackcatfarmsdfw" aria-label="Instagram">
                     <%= require('@fortawesome/fontawesome-free/svgs/brands/instagram.svg') %>
                 </a>
-                <a href="https://www.youtube.com/channel/UCN2h5lvBpqu-OKIUPUGumHw">
+                <a href="https://www.youtube.com/channel/UCN2h5lvBpqu-OKIUPUGumHw" aria-label="YouTube">
                     <%= require('@fortawesome/fontawesome-free/svgs/brands/youtube.svg') %>
                 </a>
             </div>
@@ -43,7 +43,8 @@
             <!-- keep form attributes so this works if JS is disabled or otherwise broken -->
             <form id="newsletter-sign-up-form" method="POST" action="https://listmonk.blackcatfarms.co/subscription/form">
                 <h3>Join Our Newsletter</h3>
-                <input type="text" name="email" placeholder="you@email.com" /> 
+                <label for="email" class="sr-only">Email</label>
+                <input type="text" id="email" name="email" placeholder="you@email.com" /> 
                 <input type="hidden" checked name="l" checked value="b2ab30c7-d731-4ad3-9e90-2ae65254b216" />
                 <button type="submit">Submit</button>
             </form>

@@ -1,3 +1,4 @@
+@import url(./accessibility.css);
 @import url(./reset.css);
 @import url(./typography.css);
 
@@ -16,14 +17,16 @@ button {
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
-button:hover {
+button:hover,
+button:focus {
   background-color: yellow;
   color: black;
 }
 
 hr {
   width: 300px;
-  color: yellow;
+  color: yellow; /* firefox */
+  border-color: yellow; /* chrome  */
   margin: 2rem auto;
 }
 
