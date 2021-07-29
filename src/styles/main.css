@@ -70,6 +70,9 @@ hr {
   max-width: 450px;
   margin: 3rem auto;
 }
+#newsletter-error {
+  margin-top: 2rem;
+}
 
 .info-container {
   min-height: 100vh;

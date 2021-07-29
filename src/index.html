@@ -40,11 +40,20 @@
             </h3>
         </div>
         <div class="newsletter">
-            <h3>
-                Join Our Newsletter
-            </h3>
-            <input type="text" placeholder="you@email.com">
-            <button>Submit</button>
+            <!-- keep form attributes so this works if JS is disabled or otherwise broken -->
+            <form id="newsletter-sign-up-form" method="POST" action="https://listmonk.blackcatfarms.co/subscription/form">
+                <h3>Join Our Newsletter</h3>
+                <input type="text" name="email" placeholder="you@email.com" /> 
+                <input type="hidden" checked name="l" checked value="b2ab30c7-d731-4ad3-9e90-2ae65254b216" />
+                <button type="submit">Submit</button>
+            </form>
+            <div id="newsletter-thank-you" hidden>
+                <h3>Thank you!</h3>
+                <h4>You'll be the first to know about new offerings and exciting goings-on at the farm</h4>
+            </div>
+            <div id="newsletter-error" hidden>
+                <p>Something went wrong. Try again later or <a href="mailto:inquiry@blackcatfarms.co">send us an email</a> and we'll get things fixed up.</p>
+            </div>
         </div>
     </div>
     </div>
