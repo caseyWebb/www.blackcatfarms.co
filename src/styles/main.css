@@ -72,6 +72,9 @@ hr {
 .socials a {
   margin: 0 1.5rem;
   border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .socials svg {
   width: 2rem;
