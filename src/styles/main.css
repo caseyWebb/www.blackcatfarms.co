@@ -2,30 +2,42 @@
 @import url(./reset.css);
 @import url(./typography.css);
 
+:root {
+  --fg-color: #f8f8f2;
+  --bg-color: #333132;
+  --accent-color: #ffc826;
+  --hover-color: #e6af0d;
+  --active-color: #b3880a;
+}
+
 body {
   background: url(/src/assets/landing_bg_s.webp) no-repeat center fixed;
   background-size: cover;
   padding-bottom: 2rem;
   overflow-x: hidden;
+  color: var(--fg-color);
 }
 
 button {
-  border: 3px solid yellow;
-  color: yellow;
+  border: 3px solid var(--accent-color);
   margin-bottom: 0 1rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
 button:hover,
 button:focus {
-  background-color: yellow;
+  background-color: var(--accent-color);
   color: black;
+}
+button:active {
+  background-color: var(--hover-color);
+  border-color: var(--hover-color);
 }
 
 hr {
   width: 300px;
-  color: yellow; /* firefox */
-  border-color: yellow; /* chrome  */
+  color: var(--accent-color); /* firefox */
+  border-color: var(--accent-color); /* chrome  */
   margin: 2rem auto;
 }
 
@@ -38,7 +50,6 @@ hr {
   padding: 3rem;
   text-align: center;
   background-color: black;
-  color: yellow;
 }
 
 .landing > div,
@@ -89,7 +100,6 @@ hr {
   padding: 5rem;
   background: rgba(0, 0, 0, 0.8);
   line-height: 1.4;
-  color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 .info p {

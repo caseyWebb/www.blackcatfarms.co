@@ -25,7 +25,7 @@ h5,
 h6,
 button,
 input {
-  color: yellow;
+  color: var(--accent-color);
   font-family: 'Huscon Hand', sans-serif;
   text-transform: uppercase;
 }
@@ -50,29 +50,36 @@ h6 {
 }
 
 input::placeholder {
-  color: #898900;
+  color: var(--accent-color);
 }
 
 a {
   text-decoration: none;
-  color: yellow;
-  border-bottom: 1px dashed yellow;
+  color: var(--accent-color);
+  border-bottom: 1px dashed var(--accent-color);
 }
 a svg {
-  fill: yellow;
+  fill: var(--accent-color);
 }
 a:hover,
 a:focus {
-  color: #880;
-  border-bottom: 1px solid #880;
+  color: var(--hover-color);
+  border-bottom: 1px solid var(--hover-color);
+}
+a:active {
+  color: var(--active-color);
+  border-color: var(--active-color);
 }
 a:hover svg,
 a:focus svg {
-  fill: #880;
+  fill: var(--hover-color);
+}
+a:active svg {
+  fill: var(--active-color);
 }
 
 input {
-  border-bottom: 2px solid yellow;
+  border-bottom: 2px solid var(--accent-color);
   font-size: 1rem;
   text-align: center;
   line-height: 1.7;
