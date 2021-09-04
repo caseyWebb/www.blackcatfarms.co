@@ -1,5 +1,13 @@
 @import url('@fontsource/montserrat');
-@import url('@fontsource/staatliches');
+
+@font-face {
+  font-family: 'Huscon Hand';
+  src: url('../assets/HusconHand-Regular-optimized.woff2') format('woff2'),
+    url('../assets/HusconHand-Regular-optimized.woff') format('woff'),
+    url('../assets/HusconHand-Regular-optimized.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html,
 body {
@@ -17,8 +25,9 @@ h5,
 h6,
 button,
 input {
-  font-family: 'Staatliches';
   color: yellow;
+  font-family: 'Huscon Hand', sans-serif;
+  text-transform: uppercase;
 }
 
 h1 {
