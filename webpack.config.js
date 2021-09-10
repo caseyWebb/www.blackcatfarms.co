@@ -67,6 +67,7 @@ module.exports = ({ WEBPACK_SERVE }) => ({
     new FaviconsWebpackPlugin({
       logo: './src/assets/favicon.png',
       favicons: {
+        background: 'rgba(255,255,255,0)',
         icons: {
           android: true,
           appleIcon: true,
