@@ -65,7 +65,7 @@ module.exports = ({ WEBPACK_SERVE }) => ({
       inject: WEBPACK_SERVE === true,
     }),
     new FaviconsWebpackPlugin({
-      logo: './src/assets/favicon_petal.png',
+      logo: './src/assets/favicon.png',
       favicons: {
         icons: {
           android: true,
