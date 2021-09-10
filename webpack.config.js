@@ -62,10 +62,22 @@ module.exports = ({ WEBPACK_SERVE }) => ({
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/index.html',
-      inject: WEBPACK_SERVE,
+      inject: WEBPACK_SERVE === true,
     }),
     new FaviconsWebpackPlugin({
-      logo: './src/assets/favicon.png',
+      logo: './src/assets/favicon_petal.png',
+      favicons: {
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: false,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          windows: true,
+          yandex: false,
+        },
+      },
     }),
   ],
 
