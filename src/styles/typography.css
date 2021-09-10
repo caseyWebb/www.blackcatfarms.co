@@ -25,9 +25,24 @@ h5,
 h6,
 button,
 input {
-  color: var(--accent-color);
+  color: var(--petal-0);
   font-family: 'Huscon Hand', sans-serif;
   text-transform: uppercase;
+}
+
+input {
+  color: var(--coal);
+}
+
+.landing h1,
+.landing h2,
+.landing h3,
+.landing a,
+.landing button {
+  color: var(--coal);
+}
+.landing a svg {
+  fill: var(--coal);
 }
 
 h1 {
@@ -50,36 +65,34 @@ h6 {
 }
 
 input::placeholder {
-  color: var(--accent-color);
+  color: var(--coal);
 }
 
 a {
   text-decoration: none;
-  color: var(--accent-color);
-  border-bottom: 1px dashed var(--accent-color);
+  color: var(--petal-0);
+  border-bottom: 1px dashed var(--petal-0);
 }
-a svg {
-  fill: var(--accent-color);
-}
+
 a:hover,
 a:focus {
-  color: var(--hover-color);
-  border-bottom: 1px solid var(--hover-color);
+  color: var(--petal-1);
+  border-bottom: 1px solid var(--petal-1);
 }
 a:active {
-  color: var(--active-color);
-  border-color: var(--active-color);
+  color: var(--petal-2);
+  border-color: var(--petal-2);
 }
 a:hover svg,
 a:focus svg {
-  fill: var(--hover-color);
+  fill: var(--petal-1);
 }
 a:active svg {
-  fill: var(--active-color);
+  fill: var(--petal-2);
 }
 
 input {
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--petal-0);
   font-size: 1rem;
   text-align: center;
   line-height: 1.7;
