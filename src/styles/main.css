@@ -64,6 +64,10 @@ hr {
   margin-bottom: 0;
 }
 
+#logo {
+  max-width: 100%;
+}
+
 .socials {
   display: flex;
   flex-direction: row;
