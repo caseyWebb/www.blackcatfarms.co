@@ -7,6 +7,7 @@ const path = require('path')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = ({ WEBPACK_SERVE }) => ({
@@ -62,6 +63,9 @@ module.exports = ({ WEBPACK_SERVE }) => ({
       filename: 'index.html',
       template: './src/index.html',
       inject: WEBPACK_SERVE,
+    }),
+    new FaviconsWebpackPlugin({
+      logo: './src/assets/favicon.png',
     }),
   ],
 
