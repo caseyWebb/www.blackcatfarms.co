@@ -50,7 +50,7 @@ module.exports = ({ WEBPACK_SERVE }) => ({
         type: 'asset/source',
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|webp)$/i,
         type: 'asset/resource',
       },
     ],
