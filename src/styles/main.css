@@ -104,7 +104,7 @@ hr {
   justify-content: space-evenly;
   max-width: 1000px;
   min-height: 100vh;
-  font-size: 24px;
+  font-size: 1rem;
   padding: 5rem;
   background: rgba(0, 0, 0, 0.8);
   line-height: 1.4;
